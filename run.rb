@@ -22,6 +22,7 @@ LogStashLogger.configure do |config|
     event['@system'] = ENV['LOGSTASH_SYSTEM_NAME'].nil? ? "system" : ENV['LOGSTASH_SYSTEM_NAME']
     event['@service'] = ENV['LOGSTASH_SERVICE_NAME'].nil? ? "service" : ENV['LOGSTASH_SERVICE_NAME']
     event['delay'] = ENV['LOG_DELAY']
+    event['logger_type'] = 'ruby-logstash-logger'
   end
 end
 
